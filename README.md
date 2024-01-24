@@ -62,6 +62,7 @@ services:
       volumes:
          - ./palworld:/palworld/
 ```
+Acesse a documentação completa [aqui](https://github.com/thijsvanloef/palworld-server-docker).
 * Criar o servidor:
 ```
 docker compose up
