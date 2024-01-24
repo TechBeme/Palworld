@@ -50,16 +50,15 @@ services:
       environment:
          - PUID=1000
          - PGID=1000
-         - PORT=8211 # Optional but recommended
-         - PLAYERS=16 # Optional but recommended
+         - PORT=8211
+         - PLAYERS=16 # Número de vagas do servidor
          - MULTITHREADING=true
          - RCON_ENABLED=true
          - RCON_PORT=25575
-         - ADMIN_PASSWORD="adminPasswordHere"
-         - COMMUNITY=false  # Enable this if you want your server to show up in the community servers tab, USE WITH SERVER_PASSWORD!
-         # Enable the environment variables below if you have COMMUNITY=true
-         # - SERVER_PASSWORD="worldofpals"
-         # - SERVER_NAME="World of Pals"
+         - ADMIN_PASSWORD="Senha do administrador"
+         - COMMUNITY=true  # Mostra o seu servidor na listagem da comunidade.
+         - SERVER_PASSWORD="senha do servidor"
+         - SERVER_NAME="Nome do servidor"
       volumes:
          - ./palworld:/palworld/
 ```
