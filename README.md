@@ -62,3 +62,7 @@ services:
       volumes:
          - ./palworld:/palworld/
 ```
+* Criar o servidor:
+```
+docker compose up
+```
