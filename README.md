@@ -4,11 +4,12 @@
 ```
 sudo su
 ```
-* Atualizar:
+* Atualizar o linux:
 ```
 sudo apt update
 sudo apt upgrade
 ```
+* Caso não esteja usando o Ubuntu, acesse esse [site](https://docs.docker.com/engine/install/), selecione a plataforma que você está utulizando e instale o docker com os comandos indicados no site ao invés dos comandos abaixo.
 * Instalar o docker (Ubuntu):
 ```
 # Add Docker's official GPG key:
