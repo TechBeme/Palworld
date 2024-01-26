@@ -56,8 +56,6 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
    nano docker-compose.yml
    ```
 - **Insira as configurações do servidor de sua preferência.**
-   - Defina a porta, número de jogadores, senha e outras configurações.
-   - Acesse a documentação completa [aqui](https://github.com/thijsvanloef/palworld-server-docker).
    - Exemplo de configuração:
    ```
    services:
@@ -83,6 +81,8 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
          volumes:
             - ./palworld:/palworld/
    ```
+   - Defina a porta, número de jogadores, senha e outras configurações.
+   - Acesse a documentação completa [aqui](https://github.com/thijsvanloef/palworld-server-docker).
 - **Salve o Arquivo de Configuração.**
 - **Inicie o Servidor:**
    ```
