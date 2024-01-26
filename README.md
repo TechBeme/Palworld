@@ -69,3 +69,13 @@ docker compose up
 ```
 
 # COMO ATUALIZAR O SERVIDOR DE PALWORLD
+* Para atualizar o servidor para a versão mais recente do Palworld basta reiniciar o servidor.
+* Confira se você está como usuário root e se está no mesmo diretório em que está o arquivo docker-compose.yml.
+* Se tornar usuário root:
+```
+sudo su
+```
+* Reiniciar o servidor:
+```
+docker container restart
+```
