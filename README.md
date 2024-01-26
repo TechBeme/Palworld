@@ -49,7 +49,7 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
          sudo su
          docker --version
          ```
-      
+
 ### 3. Configuração do Servidor Palworld
 - **Crie um arquivo chamado docker-compose.yml.**
    ```
@@ -89,6 +89,13 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
    sudo docker compose up
    ``` 
    - Aguarde o servidor iniciar completamente.
+
+### 4. Acesso ao Servidor
+- **Abra a porta no Firewall:**
+   - Crie uma regra UDP para o jogo com a porta que você definiu (Padrão: 8211).
+- **Obtenha o IP Externo da VM.**
+- **Abra o Palworld e Conecte-se ao Servidor:**
+   - Vá para multiplayer e use IP:PORTA para se conectar.
 
 # COMO ATUALIZAR O SERVIDOR DE PALWORLD
 Para atualizar o servidor para a versão mais recente do Palworld basta reiniciar o servidor.
