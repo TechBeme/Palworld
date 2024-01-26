@@ -57,7 +57,7 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
          ```
 
 ### 3. Configuração do Servidor Palworld
-- **Crie um arquivo chamado docker-compose.yml.**
+- **Crie um arquivo chamado [docker-compose.yml](/docker-compose.yml).**
    ```
    nano docker-compose.yml
    ```
@@ -105,7 +105,7 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
 
 # COMO ATUALIZAR O SERVIDOR DE PALWORLD
 Para atualizar o servidor para a versão mais recente do Palworld basta reiniciar o servidor.
-Confira se você está como usuário root e se está no mesmo diretório do arquivo docker-compose.yml.
+Confira se você está como usuário root e se está no mesmo diretório do arquivo [docker-compose.yml](/docker-compose.yml).
 * Reiniciar o servidor:
 ```
 sudo docker container restart
