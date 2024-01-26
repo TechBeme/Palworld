@@ -41,14 +41,14 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
   ```
    - **Caso apareça o erro "dial unix /var/run/docker.sock: connect: permission denied" significa que você não está como o usuário root.**
       - Basta adicionar o comando sudo antes de qualquer comando docker:
-      ```
-      sudo docker --version
-      ```
+         ```
+         sudo docker --version
+         ```
       - ou trocar para o usuário root e executar os comandos normalmente:
-      ```
-      sudo su
-      docker --version
-      ```
+         ```
+         sudo su
+         docker --version
+         ```
       
 ### 3. Configuração do Servidor Palworld
 - **Crie um arquivo chamado docker-compose.yml.**
