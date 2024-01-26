@@ -63,7 +63,7 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
    ```
 - **Insira as configurações do servidor de sua preferência.**
    - Exemplo de configuração:
-   ```
+   ```yml
    services:
       palworld:
          image: thijsvanloef/palworld-server-docker:latest
