@@ -67,3 +67,5 @@ Acesse a documentação completa [aqui](https://github.com/thijsvanloef/palworld
 ```
 docker compose up
 ```
+
+# COMO ATUALIZAR O SERVIDOR DE PALWORLD
