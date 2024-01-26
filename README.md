@@ -13,14 +13,14 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
 - **[Hostinger:](https://hostinger.com.br?REFERRALCODE=1RFSV68)** Opção paga, mas acessível: 2 CPUs 8 GB de RAM por R$34,99/mês.
 
 ## 2. Configuração da Máquina Virtual
-1. **Crie uma Conta no serviço escolhido.**
-2. **Crie uma Nova Máquina Virtual (VM):**
+- **Crie uma Conta no serviço escolhido.**
+- **Crie uma Nova Máquina Virtual (VM):**
    - Localização: Escolha a mais próxima para menor latência (exemplo: São Paulo, Brasil).
    - Configurações: Neste guia vou utilizar o Sistema Operacional Ubuntu.
 
 ## 3. Acesso e Configuração do Servidor
-1. **Acesse a VM via SSH.**
-2. **Obtenha Acesso Root e Atualize a Máquina:**
+- **Acesse a VM via SSH.**
+- **Obtenha Acesso Root e Atualize a Máquina:**
 ```
 sudo su
 ```
@@ -28,27 +28,37 @@ sudo su
 sudo apt update
 sudo apt upgrade
 ```
-3. **Instale o Docker:**
+- **Instale o Docker:**
    - Siga as instruções do [site oficial](https://docs.docker.com/engine/install/) do Docker para instalação.
-   - [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-   - [Debian](https://docs.docker.com/engine/install/debian/)
-   - [Fedora](https://docs.docker.com/engine/install/fedora/)
-   - [CentOS](https://docs.docker.com/engine/install/centos/)
-   - [Raspberry Pi OS (32-bit)](https://docs.docker.com/engine/install/raspberry-pi-os/)
-   - [RHEL (s390x)](https://docs.docker.com/engine/install/rhel/)
-   - [SLES](https://docs.docker.com/engine/install/sles/)
-   - [Binaries](https://docs.docker.com/engine/install/binaries/)
+      - [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+      - [Debian](https://docs.docker.com/engine/install/debian/)
+      - [Fedora](https://docs.docker.com/engine/install/fedora/)
+      - [CentOS](https://docs.docker.com/engine/install/centos/)
+      - [Raspberry Pi OS (32-bit)](https://docs.docker.com/engine/install/raspberry-pi-os/)
+      - [RHEL (s390x)](https://docs.docker.com/engine/install/rhel/)
+      - [SLES](https://docs.docker.com/engine/install/sles/)
+      - [Binaries](https://docs.docker.com/engine/install/binaries/)
    - Verificar a instalação:
 ```
 docker --version
 ```
+- **Caso apareça o erro "dial unix /var/run/docker.sock: connect: permission denied" significa que você não está como o usuário root.**
+   - Basta adicionar o comando sudo antes de qualquer comando docker:
+```
+sudo docker --version
+```
+   -  ou trocar para o usuário root e executar os comandos normalmente:
+```
+sudo su
+docker --version
+```
 
 ## 4. Configuração do Servidor Palworld
-1. **Crie um arquivo chamado docker-compose.yml.**
+- **Crie um arquivo chamado docker-compose.yml.**
 ```
 nano docker-compose.yml
 ```
-2. **Insira as configurações do servidor de sua preferência.**
+- **Insira as configurações do servidor de sua preferência.**
    - Defina a porta, número de jogadores, senha e outras configurações.
    - Acesse a documentação completa [aqui](https://github.com/thijsvanloef/palworld-server-docker).
    - Exemplo de configuração:
@@ -76,8 +86,8 @@ services:
       volumes:
          - ./palworld:/palworld/
 ```
-3. **Salve o Arquivo de Configuração.**
-4. **Inicie o Servidor:**
+- **Salve o Arquivo de Configuração.**
+- **Inicie o Servidor:**
 ```
 docker compose up
 ``` 
