@@ -85,7 +85,7 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
             - SERVER_PASSWORD="senha do servidor"
             - SERVER_NAME="Nome do servidor"
          volumes:
-            - ./palworld:/palworld/
+            - ./servidor:/palworld/
    ```
    - Defina a porta, número de jogadores, senha e outras configurações.
    - Acesse a documentação completa [aqui](https://github.com/thijsvanloef/palworld-server-docker).
