@@ -1,4 +1,6 @@
 # Como criar um servidor dedicado de Palworld
+[![Crie seu Próprio Servidor Dedicado de Palworld GRÁTIS](https://github.com/TechBeme/Palworld/assets/101749351/970e4455-bc9e-4406-be1a-a43183c178d4)](https://youtu.be/ZXk4wE1rcXM)
+
 ## Comandos
 * Alterar para o usuário root:
 ```
