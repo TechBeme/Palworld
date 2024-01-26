@@ -86,7 +86,7 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
 - **Salve o Arquivo de Configuração.**
 - **Inicie o Servidor:**
    ```
-   docker compose up
+   sudo docker compose up
    ``` 
    - Aguarde o servidor iniciar completamente.
 
