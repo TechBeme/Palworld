@@ -1,24 +1,24 @@
 # Como criar um servidor dedicado de Palworld
 [![Crie seu Próprio Servidor Dedicado de Palworld GRÁTIS](https://github.com/TechBeme/Palworld/assets/101749351/970e4455-bc9e-4406-be1a-a43183c178d4)](https://youtu.be/ZXk4wE1rcXM)
 
-## Introdução
+# Introdução
 Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer momento, sem depender do seu PC ou internet pessoal. Este guia aborda a criação de um servidor utilizando serviços de nuvem como Oracle Cloud, Google Cloud, AWS e Hostinger.
 
-## Passos para a Criação do Servidor
+# Passos para a Criação do Servidor
 
-### 1. Escolha do Serviço de Hospedagem
+## 1. Escolha do Serviço de Hospedagem
 - **[Oracle Cloud:](https://www.oracle.com/br/cloud/free)** 4 CPUs e 24 GB de RAM grátis para sempre.
 - **[Google Cloud:](https://cloud.google.com)** $300 de crédito grátis por três meses.
 - **[AWS:](https://aws.amazon.com/pt/free)** Teste gratuito por 12 meses.
 - **[Hostinger:](https://hostinger.com.br?REFERRALCODE=1RFSV68)** Opção paga, mas acessível: 2 CPUs 8 GB de RAM por R$34,99/mês.
 
-### 2. Configuração da Máquina Virtual
+## 2. Configuração da Máquina Virtual
 1. **Crie uma Conta no serviço escolhido.**
 2. **Crie uma Nova Máquina Virtual (VM):**
    - Localização: Escolha a mais próxima para menor latência (exemplo: São Paulo, Brasil).
    - Configurações: Neste guia vou utilizar o Sistema Operacional Ubuntu.
 
-### 3. Acesso e Configuração do Servidor
+## 3. Acesso e Configuração do Servidor
 1. **Acesse a VM via SSH.**
 2. **Obtenha Acesso Root e Atualize a Máquina:**
 ```
@@ -30,12 +30,20 @@ sudo apt upgrade
 ```
 3. **Instale o Docker:**
    - Siga as instruções do [site oficial](https://docs.docker.com/engine/install/) do Docker para instalação.
+   - [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+   - [Debian](https://docs.docker.com/engine/install/debian/)
+   - [Fedora](https://docs.docker.com/engine/install/fedora/)
+   - [CentOS](https://docs.docker.com/engine/install/centos/)
+   - [Raspberry Pi OS (32-bit)](https://docs.docker.com/engine/install/raspberry-pi-os/)
+   - [RHEL (s390x)](https://docs.docker.com/engine/install/rhel/)
+   - [SLES](https://docs.docker.com/engine/install/sles/)
+   - [Binaries](https://docs.docker.com/engine/install/binaries/)
    - Verificar a instalação:
 ```
 docker --version
 ```
 
-### 4. Configuração do Servidor Palworld
+## 4. Configuração do Servidor Palworld
 1. **Crie um arquivo chamado docker-compose.yml.**
 ```
 nano docker-compose.yml
