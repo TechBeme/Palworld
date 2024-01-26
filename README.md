@@ -36,12 +36,14 @@ docker --version
 ```
 
 ### 4. Configuração do Servidor Palworld
-1. **Baixe e Edite o Arquivo de Configuração do Servidor Palworld:**
-   - Crie um arquivo chamado docker-compose.yml e insira as configurações do servidor de sua preferência.
+1. **Crie um arquivo chamado docker-compose.yml.**
 ```
 nano docker-compose.yml
 ```
-Exemplo de configuração:
+2. **Insira as configurações do servidor de sua preferência.**
+   - Defina a porta, número de jogadores, senha e outras configurações.
+   - Acesse a documentação completa [aqui](https://github.com/thijsvanloef/palworld-server-docker).
+   - Exemplo de configuração:
 ```
 services:
    palworld:
@@ -66,8 +68,6 @@ services:
       volumes:
          - ./palworld:/palworld/
 ```
-Acesse a documentação completa [aqui](https://github.com/thijsvanloef/palworld-server-docker).
-   - Defina a porta, número de jogadores, senha e outras configurações.
 3. **Salve o Arquivo de Configuração.**
 4. **Inicie o Servidor:**
 ```
