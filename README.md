@@ -4,6 +4,9 @@
 # INTRODUÇÃO
 Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer momento, sem depender do seu PC ou internet pessoal. Este guia aborda a criação de um servidor utilizando serviços de nuvem como Oracle Cloud, Google Cloud, AWS e Hostinger.
 
+> [!WARNING]
+> Atualmente, servidores dedicados funcionam apenas para jogadores que utilizam a Steam. Jogadores do Xbox Gamepass ou do Xbox Console não conseguem se conectar a servidores dedicados. Eles conseguem jogar apenas em sessões por convite que comportam no máximo 4 jogadores.
+
 # PASSOS PARA A CRIAÇÃO DO SERVIDOR
 ### 1. Escolha do Serviço de Hospedagem
 - **[Oracle Cloud:](https://www.oracle.com/br/cloud/free)** 4 CPUs e 24 GB de RAM grátis para sempre.
