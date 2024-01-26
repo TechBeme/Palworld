@@ -1,0 +1,22 @@
+services:
+   palworld:
+      image: thijsvanloef/palworld-server-docker:latest
+      restart: unless-stopped
+      container_name: palworld-server
+      ports:
+        - 8211:8211/udp
+        - 27015:27015/udp
+      environment:
+         - PUID=1000
+         - PGID=1000
+         - PORT=8211
+         - PLAYERS=16 # Número de vagas do servidor
+         - MULTITHREADING=true
+         - RCON_ENABLED=true
+         - RCON_PORT=25575
+         - ADMIN_PASSWORD="Senha do administrador"
+         - COMMUNITY=true  # Mostra o seu servidor na listagem da comunidade.
+         - SERVER_PASSWORD="senha do servidor"
+         - SERVER_NAME="Nome do servidor"
+      volumes:
+         - ./palworld:/palworld/
