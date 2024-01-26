@@ -9,10 +9,13 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
 
 # PASSOS PARA A CRIAÇÃO DO SERVIDOR
 ### 1. Escolha do Serviço de Hospedagem
-- **[Oracle Cloud:](https://www.oracle.com/br/cloud/free)** 4 CPUs e 24 GB de RAM grátis para sempre.
-- **[Google Cloud:](https://cloud.google.com)** $300 de crédito grátis por três meses.
-- **[AWS:](https://aws.amazon.com/pt/free)** Teste gratuito por 12 meses.
-- **[Hostinger:](https://hostinger.com.br?REFERRALCODE=1RFSV68)** Opção paga, mas acessível: 2 CPUs 8 GB de RAM por R$34,99/mês.
+
+| VPS | CPUs | Ram | Preço |
+|-----|------|-----|-------|
+| [Oracle Cloud](https://www.oracle.com/br/cloud/free) | 4 | 24 GB | Grátis |
+| [Google Cloud](https://cloud.google.com) | X | X | 300$ de crédito grátis por 3 meses |
+| [AWS](https://aws.amazon.com/pt/free) | X | X | Grátis por 1 ano |
+| [Hostinger](https://hostinger.com.br?REFERRALCODE=1RFSV68) | 2 | 8 GB | R$34,99 |
 
 ### 2. Acesso e Configuração da Máquina Virtual
 - **Crie uma Conta no serviço escolhido.**
