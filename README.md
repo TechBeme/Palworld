@@ -108,5 +108,5 @@ Para atualizar o servidor para a versão mais recente do Palworld basta reinicia
 Confira se você está como usuário root e se está no mesmo diretório do arquivo [docker-compose.yml](/docker-compose.yml).
 * Reiniciar o servidor:
 ```
-sudo docker container restart
+sudo docker compose restart
 ```
