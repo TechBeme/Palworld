@@ -113,7 +113,7 @@ sudo docker compose restart
 
 # COMO ALTERAR AS CONFIGURAÇÕES DO SERVIDOR DE PALWORLD
 
-### **Lista de Configurações doe Servidor Dedicado do Palworld**
+### **Lista de Configurações do Servidor Dedicado do Palworld**
 
 | Parâmetro                                | Descrição                                                                                          |
 |------------------------------------------|----------------------------------------------------------------------------------------------------|
