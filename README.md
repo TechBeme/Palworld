@@ -113,7 +113,7 @@ sudo docker compose restart
 
 # COMO ALTERAR AS CONFIGURAÇÕES DO SERVIDOR DE PALWORLD
 
-### **Lista de Configurações do Servidor Dedicado do Palworld**
+### **1. Lista de Configurações do Servidor Dedicado do Palworld**
 Estes parâmetros devem ser alterados nos arquivos do servidor, especificamente no arquivo PalWorldSettings.ini. Estas configurações permitem personalizar a experiência de jogo do servidor.
 
 
@@ -159,7 +159,7 @@ Estes parâmetros devem ser alterados nos arquivos do servidor, especificamente 
 | AutoResetGuildTimeNoOnlinePlayers        | Define o tempo após o qual guildas sem jogadores online são resetadas automaticamente.             |
 | GuildPlayerMaxNum                        | Define o número máximo de jogadores em uma guilda.                                                 |
 
-### **Lista de Comandos de Administrador do Servidor Dedicado do Palworld**
+### **2. Lista de Comandos de Administrador do Servidor Dedicado do Palworld**
 Estes comandos de administração do servidor de Palworld são utilizados dentro do jogo, através do chat, permitindo ao administrador gerenciar e controlar diversos aspectos do servidor em tempo real.
 
 | Comando                                   | Descrição                                                                                                                                                                                                                             |
