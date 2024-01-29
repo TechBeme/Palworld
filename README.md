@@ -114,6 +114,8 @@ sudo docker compose restart
 # COMO ALTERAR AS CONFIGURAÇÕES DO SERVIDOR DE PALWORLD
 
 ### **Lista de Configurações do Servidor Dedicado do Palworld**
+Estes parâmetros devem ser alterados nos arquivos do servidor, especificamente no arquivo PalWorldSettings.ini. Estas configurações permitem personalizar a experiência de jogo do servidor.
+
 
 | Parâmetro                                | Descrição                                                                                          |
 |------------------------------------------|----------------------------------------------------------------------------------------------------|
