@@ -113,6 +113,8 @@ sudo docker compose restart
 
 # COMO ALTERAR AS CONFIGURAÇÕES DO SERVIDOR DE PALWORLD
 
+### **Lista de Configurações doe Servidor Dedicado do Palworld**
+
 | Parâmetro                                | Descrição                                                                                          |
 |------------------------------------------|----------------------------------------------------------------------------------------------------|
 | Difficulty                               | Ajusta a dificuldade geral do jogo.                                                                |
