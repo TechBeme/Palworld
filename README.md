@@ -155,6 +155,22 @@ sudo docker compose restart
 | DropItemAliveMaxHours                    | Define o tempo máximo que itens permanecem ativos após serem caídos.                               |
 | bAutoResetGuildNoOnlinePlayers           | Reseta automaticamente guildas sem jogadores online.                                               |
 | AutoResetGuildTimeNoOnlinePlayers        | Define o tempo após o qual guildas sem jogadores online são resetadas automaticamente.             |
-| GuildPlayerMaxNum                        | Define o número máximo de jogadores em uma guilda                                                  |
+| GuildPlayerMaxNum                        | Define o número máximo de jogadores em uma guilda.                                                 |
 
+### **Lista de Comandos de Administrador do Servidor Dedicado do Palworld**
+Estes comandos de administração do servidor de Palworld são utilizados dentro do jogo, através do chat, permitindo ao administrador gerenciar e controlar diversos aspectos do servidor em tempo real.
+
+| Comando                                   | Descrição                                                                                                                                                                                                                             |
+|-------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /AdminPassword {Senha}                    | Concede permissão de administrador.                                                                                                                                                                                                   |
+| /Shutdown {Segundos} {TextoMensagem}      | Desliga o servidor. Você pode definir um tempo em segundos para o desligamento e uma mensagem opcional para notificar os jogadores no servidor.                                                                                       |
+| /DoExit                                   | Desliga o servidor imediatamente. Usar apenas em caso de problemas técnicos, pois alguns dados podem ser perdidos.                                                                                                                    |
+| /Broadcast {TextoMensagem}                | Envia uma mensagem para todos os jogadores no servidor.                                                                                                                                                                               |
+| /KickPlayer {UIDJogador ou SteamID}       | Expulsa um jogador do servidor.                                                                                                                                                                                                       |
+| /BanPlayer {UIDJogador ou SteamID}        | Bane um jogador do servidor. O jogador não poderá se reconectar ao servidor até ser desbanido.                                                                                                                                        |
+| /TeleportToPlayer {UIDJogador ou SteamID} | Teleporta você até um jogador específico.                                                                                                                                                                                             |
+| /TeleportToMe {UIDJogador ou SteamID}     | Teleporta um jogador específico até você.                                                                                                                                                                                             |
+| /ShowPlayers                              | Exibe a lista de todos os jogadores conectados.                                                                                                                                                                                       |
+| /Info                                     | Mostra informações do servidor.                                                                                                                                                                                                       |
+| /Save                                     | Salva manualmente os dados do jogo, como a progressão dos jogadores e criaturas.                                                                                                                                                      |
 
