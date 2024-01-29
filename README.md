@@ -110,3 +110,49 @@ Confira se você está como usuário root e se está no mesmo diretório do arqu
 ```
 sudo docker compose restart
 ```
+
+# COMO ALTERAR AS CONFIGURAÇÕES DO SERVIDOR DE PALWORLD
+
+| Parâmetro                                | Descrição                                                                                          |
+|------------------------------------------|----------------------------------------------------------------------------------------------------|
+| Difficulty                               | Ajusta a dificuldade geral do jogo.                                                                |
+| DayTimeSpeedRate                         | Modifica a velocidade do tempo in-game durante o dia.                                              |
+| NightTimeSpeedRate                       | Modifica a velocidade do tempo in-game durante a noite.                                            |
+| ExpRate                                  | Altera a taxa de ganho de experiência para jogadores e criaturas.                                  |
+| PalCaptureRate                           | Ajusta a taxa na qual criaturas Pal podem ser capturadas.                                          |
+| PalSpawnNumRate                          | Ajusta a taxa na qual criaturas Pal aparecem.                                                      |
+| PalDamageRateAttack                      | Ajusta o dano causado por criaturas Pal.                                                           |
+| PalDamageRateDefense                     | Ajusta o dano recebido por criaturas Pal.                                                          |
+| PlayerDamageRateAttack                   | Ajusta o dano causado pelos jogadores.                                                             |
+| PlayerDamageRateDefense                  | Ajusta o dano recebido pelos jogadores.                                                            |
+| PlayerStomachDecreaseRate                | Ajusta a taxa na qual o estômago do jogador diminui.                                               |
+| PlayerStaminaDecreaseRate                | Ajusta a taxa na qual a stamina do jogador diminui.                                                |
+| PlayerAutoHPRegeneRate                   | Ajusta a taxa de regeneração automática de saúde do jogador.                                       |
+| PlayerAutoHpRegeneRateInSleep            | Ajusta a taxa de regeneração automática de saúde do jogador durante o sono.                        |
+| PalStomachDecreaseRate                   | Ajusta a taxa na qual o estômago da criatura Pal diminui.                                          |
+| PalStaminaDecreaseRate                   | Ajusta a taxa na qual a stamina da criatura Pal diminui.                                           |
+| PalAutoHPRegeneRate                      | Ajusta a taxa de regeneração automática de saúde da criatura Pal.                                  |
+| PalAutoHpRegeneRateInSleep               | Ajusta a taxa de regeneração automática de saúde da criatura Pal durante o sono.                   |
+| BuildObjectDamageRate                    | Ajusta a taxa na qual objetos construídos recebem dano.                                            |
+| BuildObjectDeteriorationDamageRate       | Ajusta a taxa na qual objetos construídos se deterioram.                                           |
+| CollectionDropRate                       | Ajusta a taxa de queda de itens coletados.                                                         |
+| CollectionObjectHpRate                   | Ajusta a saúde de objetos coletados.                                                               |
+| CollectionObjectRespawnSpeedRate         | Ajusta a velocidade de respawn de objetos coletados.                                               |
+| EnemyDropItemRate                        | Ajusta a taxa de queda de itens de inimigos derrotados.                                            |
+| DeathPenalty                             | Define a penalidade após a morte do jogador. Valores: 0 ou 'None' (Sem penalidades após a morte), 1 ou 'Item' (Itens na mochila caem ao morrer), 2 ou 'ItemAndEquipment' (Itens na mochila e equipados caem ao morrer), 3 ou 'All' (Itens na mochila e equipados caem, incluindo Pals).           |
+| bEnablePlayerToPlayerDamage              | Habilita ou desabilita o dano de jogador para jogador.                                             |
+| bEnableFriendlyFire                      | Habilita ou desabilita o fogo amigo.                                                               |
+| bEnableInvaderEnemy                      | Habilita ou desabilita inimigos invasores.                                                         |
+| bActiveUNKO                              | Ativa ou desativa UNKO (Unidentified Nocturnal Knock-off).                                         |
+| bEnableAimAssistPad                      | Habilita ou desabilita a assistência de mira para controles.                                       |
+| bEnableAimAssistKeyboard                 | Habilita ou desabilita a assistência de mira para teclados.                                        |
+| DropItemMaxNum                           | Define o número máximo de itens caídos no jogo.                                                    |
+| DropItemMaxNum_UNKO                      | Define o número máximo de itens UNKO caídos no jogo.                                               |
+| BaseCampMaxNum                           | Define o número máximo de acampamentos base que podem ser construídos.                             |
+| BaseCampWorkerMaxNum                     | Define o número máximo de trabalhadores em um acampamento base.                                    |
+| DropItemAliveMaxHours                    | Define o tempo máximo que itens permanecem ativos após serem caídos.                               |
+| bAutoResetGuildNoOnlinePlayers           | Reseta automaticamente guildas sem jogadores online.                                               |
+| AutoResetGuildTimeNoOnlinePlayers        | Define o tempo após o qual guildas sem jogadores online são resetadas automaticamente.             |
+| GuildPlayerMaxNum                        | Define o número máximo de jogadores em uma guilda                                                  |
+
+
