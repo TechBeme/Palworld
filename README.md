@@ -158,6 +158,29 @@ Estes parâmetros devem ser alterados nos arquivos do servidor, especificamente 
 | bAutoResetGuildNoOnlinePlayers           | Reseta automaticamente guildas sem jogadores online.                                               |
 | AutoResetGuildTimeNoOnlinePlayers        | Define o tempo após o qual guildas sem jogadores online são resetadas automaticamente.             |
 | GuildPlayerMaxNum                        | Define o número máximo de jogadores em uma guilda.                                                 |
+| PalEggDefaultHatchingTime                | Define o tempo padrão de incubação para ovos de Pal.                                               |
+| WorkSpeedRate                            | Ajusta a velocidade geral de trabalho no jogo.                                                     |
+| bIsMultiplay                             | Ativa ou desativa o modo multijogador.                                                             |
+| bIsPvP                                   | Ativa ou desativa o modo jogador contra jogador (PvP).                                             |
+| bCanPickupOtherGuildDeathPenaltyDrop     | Ativa ou desativa a coleta de itens de penalidade de morte de outras guildas.                      |
+| bEnableNonLoginPenalty                   | Ativa ou desativa penalidades para não login.                                                      |
+| bEnableFastTravel                        | Ativa ou desativa a viagem rápida.                                                                 |
+| bIsStartLocationSelectByMap              | Ativa ou desativa a seleção de locais de início no mapa.                                           |
+| bExistPlayerAfterLogout                  | Ativa ou desativa a existência de jogadores após o logout.                                         |
+| bEnableDefenseOtherGuildPlayer           | Ativa ou desativa a defesa de jogadores de outras guildas.                                         |
+| CoopPlayerMaxNum                         | Define o número máximo de jogadores cooperativos em uma sessão.                                    |
+| ServerPlayerMaxNum                       | Define o número máximo de jogadores permitidos no servidor.                                        |
+| ServerName                               | Define o nome do servidor Palworld.                                                                |
+| ServerDescription                        | Fornece uma descrição para o servidor Palworld.                                                    |
+| AdminPassword                            | Define a senha para administração do servidor.                                                     |
+| ServerPassword                           | Define a senha para entrar no servidor Palworld.                                                   |
+| PublicPort                               | Define a porta pública para o servidor Palworld.                                                   |
+| PublicIP                                 | Define o endereço IP público para o servidor Palworld.                                             |
+| RCONEnabled                              | Ativa ou desativa o Console Remoto (RCON) para administração do servidor.                          |
+| RCONPort                                 | Define a porta para comunicação do Console Remoto (RCON).                                          |
+| Region                                   | Define a região do servidor Palworld.                                                              |
+| bUseAuth                                 | Ativa ou desativa a autenticação do servidor.                                                      |
+| BanListURL                               | Define a URL para a lista de banidos do servidor.                                                  |
 
 ### **2. Lista de Comandos de Administrador do Servidor Dedicado do Palworld**
 Estes comandos de administração do servidor de Palworld são utilizados dentro do jogo, através do chat, permitindo ao administrador gerenciar e controlar diversos aspectos do servidor em tempo real.
