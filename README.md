@@ -1,6 +1,20 @@
 # COMO CRIAR UM SERVIDOR DEDICADO DE PALWORLD
 [![Crie seu Próprio Servidor Dedicado de Palworld GRÁTIS](https://github.com/TechBeme/Palworld/assets/101749351/970e4455-bc9e-4406-be1a-a43183c178d4)](https://youtu.be/ZXk4wE1rcXM)
 
+# Sumário
+- [Introdução](#introdução)
+- [Passos para a Criação do Servidor](#passos-para-a-criação-do-servidor)
+  - [Escolha do Serviço de Hospedagem](#1-escolha-do-serviço-de-hospedagem)
+  - [Acesso e Configuração da Máquina Virtual](#2-acesso-e-configuração-da-máquina-virtual)
+  - [Configuração do Servidor Palworld](#3-configuração-do-servidor-palworld)
+  - [Acesso ao Servidor](#4-acesso-ao-servidor)
+- [Como Atualizar o Servidor de Palworld](#como-atualizar-o-servidor-de-palworld)
+- [Como Alterar as Configurações do Servidor de Palworld](#como-alterar-as-configurações-do-servidor-de-palworld)
+  - [Método 1](#método-1)
+  - [Método 2](#método-2)
+  - [Lista de Configurações do Servidor Dedicado do Palworld](#1-lista-de-configurações-do-servidor-dedicado-do-palworld)
+  - [Lista de Comandos de Administrador do Servidor Dedicado do Palworld](#2-lista-de-comandos-de-administrador-do-servidor-dedicado-do-palworld)
+
 # INTRODUÇÃO
 Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer momento, sem depender do seu PC ou internet pessoal. Este guia aborda a criação de um servidor utilizando serviços de nuvem como Oracle Cloud, Google Cloud, AWS e Hostinger.
 
