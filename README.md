@@ -12,7 +12,7 @@
 - [Como Alterar as Configurações do Servidor de Palworld](#como-alterar-as-configurações-do-servidor-de-palworld)
   - [Método 1](#método-1)
   - [Método 2](#método-2)
-  - [Lista dos Parâmetros de Configurações do Servidor Dedicado do Palworld](#1-lista-dos-parâmetros-configurações-do-servidor-dedicado-do-palworld)
+  - [Lista dos Parâmetros de Configurações do Servidor Dedicado do Palworld](#1-lista-dos-parâmetros-de-configurações-do-servidor-dedicado-do-palworld)
   - [Lista de Comandos de Administrador do Servidor Dedicado do Palworld](#2-lista-de-comandos-de-administrador-do-servidor-dedicado-do-palworld)
 
 # INTRODUÇÃO
