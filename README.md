@@ -114,6 +114,9 @@ sudo docker compose restart
 # COMO ALTERAR AS CONFIGURAÇÕES DO SERVIDOR DE PALWORLD
 Este guia explica como alterar várias configurações no seu servidor dedicado de Palworld, por exemplo, desativar o drop de itens ao morrer, reduzir o tempo de incubação de ovos e acelerar o crafting.
 
+> [!WARNING]
+> Atenção, qualquer parâmetro definido na seção environment do arquivo [docker-compose.yml](/docker-compose.yml) terá prioridade sobre as configurações presentes no arquivo PalWorldSettings.ini. Isso significa que, se uma configuração específica for definida tanto no Docker quanto no arquivo PalWorldSettings.ini, a configuração do Docker Compose será a que prevalecerá no servidor. Caso prefira gerenciar as configurações diretamente pelo arquivo PalWorldSettings.ini, é importante remover ou comentar as linhas correspondentes na seção environment do seu docker-compose.yml.
+
 ### Método 1:
 - Acesse a pasta do seu servidor (se você criou o servidor na versão mais atual do [docker-compose.yml](/docker-compose.yml) ela irá chamar "servidor", caso contrário será "palworld").
 - Copie o conteúdo do arquivo DefaultPalWorldSettings.ini para PalWorldSettings.ini com o comando:
