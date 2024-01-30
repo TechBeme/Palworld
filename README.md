@@ -120,7 +120,7 @@ Este guia explica como alterar várias configurações no seu servidor dedicado 
    ```
    sudo cp DefaultPalWorldSettings.ini Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
    ```
-- Abra o arquivo de Configurações com:
+- Abra o arquivo de Configuração com:
    ```
    sudo nano Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
    ```
