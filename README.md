@@ -118,7 +118,7 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
    - Vá para multiplayer e use IP:PORTA para se conectar.
 
 # COMO ATUALIZAR O SERVIDOR DE PALWORLD
-![Como ATUALIZAR seu Servidor Dedicado de Palworld para a Nova Versão](https://github.com/TechBeme/Palworld/assets/101749351/78e6a562-8420-418b-9a2b-5afa823fba92)
+[![Como ATUALIZAR seu Servidor Dedicado de Palworld para a Nova Versão](https://github.com/TechBeme/Palworld/assets/101749351/78e6a562-8420-418b-9a2b-5afa823fba92)](https://youtu.be/6tdbGYvDKOU)
 
 Para atualizar o servidor para a versão mais recente do Palworld basta reiniciar o servidor.
 Confira se você está como usuário root e se está no mesmo diretório do arquivo [docker-compose.yml](/docker-compose.yml).
@@ -128,7 +128,7 @@ sudo docker compose restart
 ```
 
 # COMO ALTERAR AS CONFIGURAÇÕES DO SERVIDOR DE PALWORLD
-![Como Alterar as Configurações do seu Servidor Dedicado de Palworld](https://github.com/TechBeme/Palworld/assets/101749351/243722b4-e1d2-425d-9735-55ac86222cfd)
+[![Como Alterar as Configurações do seu Servidor Dedicado de Palworld](https://github.com/TechBeme/Palworld/assets/101749351/243722b4-e1d2-425d-9735-55ac86222cfd)](https://youtu.be/GK9mh071Mzs)
 
 Este guia explica como alterar várias configurações no seu servidor dedicado de Palworld, por exemplo, desativar o drop de itens ao morrer, reduzir o tempo de incubação de ovos e acelerar o crafting.
 
