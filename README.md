@@ -112,7 +112,43 @@ sudo docker compose restart
 ```
 
 # COMO ALTERAR AS CONFIGURAÇÕES DO SERVIDOR DE PALWORLD
+Este guia explica como alterar várias configurações no seu servidor dedicado de Palworld, por exemplo, desativar o drop de itens ao morrer, reduzir o tempo de incubação de ovos e acelerar o crafting.
 
+### Método 1:
+- Acesse a pasta do seu servidor (se você criou o servidor na versão mais atual do [docker-compose.yml](/docker-compose.yml) ela irá chamar "servidor", caso contrário será "palworld").
+- Copie o conteúdo do arquivo DefaultPalWorldSettings.ini para PalWorldSettings.ini com o comando:
+   ```
+   sudo cp DefaultPalWorldSettings.ini Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+   ```
+- Abra o arquivo de Configurações com:
+   ```
+   sudo nano Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+   ```
+- O arquivo PalWorldSettings.ini agora contém as configurações padrão. Altere conforme sua preferência.
+- Para salvar basta pressionar "Ctrl + X", digitar "Y" e pressionar "Enter".
+- Após fazer as alterações, reinicie o servidor para que as novas configurações tenham efeito.
+   ```
+   sudo docker compose restart
+   ```
+### Método 2:
+- Acesse a pasta do seu servidor (se você criou o servidor na versão mais atual do [docker-compose.yml](/docker-compose.yml) ela irá chamar "servidor", caso contrário será "palworld").
+- Faça o upload do arquivo DefaultPalWorldSettings.ini para a nuvem:
+   ```
+   curl --upload-file DefaultPalWorldSettings.ini https://transfer.sh/DefaultPalWorldSettings.ini
+   ```
+- Copie o link fornecido e baixe o arquivo no seu PC.
+- Edite o arquivo no seu PC e copie o código (por exemplo, com o Notepad).
+- Remove o arquivo PalWorldSettings.ini do seu servidor e crie um novo com os comandos:
+   ```
+   sudo rm Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+   sudo nano Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+   ```
+- Cole o código que você alterou no seu PC.
+- Para salvar basta pressionar "Ctrl + X", digitar "Y" e pressionar "Enter".
+- Após fazer as alterações, reinicie o servidor para que as novas configurações tenham efeito.
+   ```
+   sudo docker compose restart
+   ```
 ### **1. Lista de Configurações do Servidor Dedicado do Palworld**
 Estes parâmetros devem ser alterados nos arquivos do servidor, especificamente no arquivo PalWorldSettings.ini. Estas configurações permitem personalizar a experiência de jogo do servidor.
 
