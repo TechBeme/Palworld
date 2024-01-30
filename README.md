@@ -140,7 +140,7 @@ Este guia explica como alterar várias configurações no seu servidor dedicado 
    curl --upload-file DefaultPalWorldSettings.ini https://transfer.sh/DefaultPalWorldSettings.ini
    ```
 - Copie o link fornecido e baixe o arquivo no seu PC.
-- Edite o arquivo no seu PC e copie o código (por exemplo, com o Notepad).
+- Edite o arquivo no seu PC (por exemplo, com o Notepad) e copie o conteúdo editado.
 - Remove o arquivo PalWorldSettings.ini do seu servidor e crie um novo com os comandos:
    ```
    sudo rm Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
