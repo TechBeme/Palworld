@@ -125,7 +125,7 @@ Este guia explica como alterar várias configurações no seu servidor dedicado 
    sudo nano Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
    ```
 - O arquivo PalWorldSettings.ini agora contém as configurações padrão. Altere conforme sua preferência.
-- Para salvar basta pressionar "Ctrl + X", digitar "Y" e pressionar "Enter".
+- Para salvar basta pressionar "Ctrl + X", digitar "y" e pressionar "Enter".
 - Após fazer as alterações, reinicie o servidor para que as novas configurações tenham efeito.
    ```
    sudo docker compose restart
@@ -144,7 +144,7 @@ Este guia explica como alterar várias configurações no seu servidor dedicado 
    sudo nano Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
    ```
 - Cole o código que você alterou no seu PC.
-- Para salvar basta pressionar "Ctrl + X", digitar "Y" e pressionar "Enter".
+- Para salvar basta pressionar "Ctrl + X", digitar "y" e pressionar "Enter".
 - Após fazer as alterações, reinicie o servidor para que as novas configurações tenham efeito.
    ```
    sudo docker compose restart
