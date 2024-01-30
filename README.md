@@ -73,7 +73,7 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
 ### 3. Configuração do Servidor Palworld
 - **Crie um arquivo chamado [docker-compose.yml](/docker-compose.yml).**
    ```
-   nano docker-compose.yml
+   sudo nano docker-compose.yml
    ```
 - **Insira as configurações do servidor de sua preferência.**
    - Exemplo de configuração:
