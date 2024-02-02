@@ -192,7 +192,7 @@ Estes parâmetros devem ser alterados nos arquivos do servidor, especificamente 
 | PlayerStaminaDecreaseRate                | Ajusta a taxa na qual a stamina do jogador diminui.                                                |
 | PlayerAutoHPRegeneRate                   | Ajusta a taxa de regeneração automática de saúde do jogador.                                       |
 | PlayerAutoHpRegeneRateInSleep            | Ajusta a taxa de regeneração automática de saúde do jogador durante o sono.                        |
-| PalStomachDecreaseRate                   | Ajusta a taxa na qual a fome do jogador aumenta.                                                   |
+| PalStomachDecreaseRate                   | Ajusta a taxa na qual a fome dos pals aumenta.                                                     |
 | PalStaminaDecreaseRate                   | Ajusta a taxa na qual a stamina da criatura Pal diminui.                                           |
 | PalAutoHPRegeneRate                      | Ajusta a taxa de regeneração automática de saúde da criatura Pal.                                  |
 | PalAutoHpRegeneRateInSleep               | Ajusta a taxa de regeneração automática de saúde da criatura Pal durante o sono.                   |
