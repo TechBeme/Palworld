@@ -188,7 +188,7 @@ Estes parâmetros devem ser alterados nos arquivos do servidor, especificamente 
 | PalDamageRateDefense                     | Ajusta o dano recebido por criaturas Pal.                                                          |
 | PlayerDamageRateAttack                   | Ajusta o dano causado pelos jogadores.                                                             |
 | PlayerDamageRateDefense                  | Ajusta o dano recebido pelos jogadores.                                                            |
-| PlayerStomachDecreaseRate                | Ajusta a taxa na qual o estômago do jogador diminui.                                               |
+| PlayerStomachDecreaseRate                | Ajusta a taxa na qual a fome do jogador aumenta.                                                   |
 | PlayerStaminaDecreaseRate                | Ajusta a taxa na qual a stamina do jogador diminui.                                                |
 | PlayerAutoHPRegeneRate                   | Ajusta a taxa de regeneração automática de saúde do jogador.                                       |
 | PlayerAutoHpRegeneRateInSleep            | Ajusta a taxa de regeneração automática de saúde do jogador durante o sono.                        |
