@@ -21,5 +21,10 @@ services:
          #- SERVER_PASSWORD= # Senha do servidor. (obs: remova o Hashtag antes de "- SERVER_PASSWORD" para utilizar a senha)
          - ADMIN_PASSWORD=admin # Senha do administrador.
          - DISCORD_WEBHOOK_URL= # Insira a sua webhook do discord, algo tipo: https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+         - DISCORD_PRE_UPDATE_BOOT_MESSAGE=Em fase de expansão... O pal tá aumentando seu poder!
+         - DISCORD_POST_UPDATE_BOOT_MESSAGE=Atualização completa! O pal tá no ponto, mais firme e forte do que nunca.
+         - DISCORD_PRE_START_MESSAGE=O pal acordou! Pronto para a caça, firme e forte.
+         - DISCORD_PRE_SHUTDOWN_MESSAGE=Desligando... O pal tá exausto, precisa de um tempo.
+         - DISCORD_POST_SHUTDOWN_MESSAGE=Segura que o pal está caindo... brochou!
       volumes:
          - ./servidor:/palworld/
