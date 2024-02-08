@@ -96,11 +96,11 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
             - RCON_PORT=25575
             - TZ=UTC-3
             - COMMUNITY=true  # Mostra o seu servidor na listagem da comunidade.
-            - SERVER_NAME="Nome do servidor"
-            - SERVER_DESCRIPTION="Descrição do servidor"
-            - SERVER_PASSWORD="" # Senha do servidor.
-            - ADMIN_PASSWORD="admin" # Senha do administrador.
-            - DISCORD_WEBHOOK_URL="" # Insira a sua webhook do discord, algo tipo: https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            - SERVER_NAME=Nome do servidor
+            - SERVER_DESCRIPTION=Descrição do servidor
+            #- SERVER_PASSWORD= # Senha do servidor. (obs: remova o Hashtag antes de "- SERVER_PASSWORD" para utilizar a senha)
+            - ADMIN_PASSWORD=admin # Senha do administrador.
+            - DISCORD_WEBHOOK_URL= # Insira a sua webhook do discord, algo tipo: https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
          volumes:
             - ./servidor:/palworld/
    ```
