@@ -15,7 +15,7 @@
   - [Método 2](#método-2)
   - [Lista dos Parâmetros de Configuração do Servidor Dedicado do Palworld](#1-lista-dos-parâmetros-de-configuração-do-servidor-dedicado-do-palworld)
   - [Lista de Comandos de Administrador do Servidor Dedicado do Palworld](#2-lista-de-comandos-de-administrador-do-servidor-dedicado-do-palworld)
-- [Como Fazer Backup Automático e Restaurar Saves do Servidor de Palworld](#como-fazer-backup-automatico-e-restaurar-saves-do-servidor-de-palworld)
+- [Como Fazer Backup Automático e Restaurar Saves do Servidor de Palworld](#como-fazer-backup-automático-e-restaurar-saves-do-servidor-de-palworld)
 
 # INTRODUÇÃO
 Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer momento, sem depender do seu PC ou internet pessoal. Este guia aborda a criação de um servidor utilizando serviços de nuvem como Oracle Cloud, Google Cloud, AWS e Hostinger.
