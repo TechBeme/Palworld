@@ -9,11 +9,13 @@
   - [Configuração do Servidor Palworld](#3-configuração-do-servidor-palworld)
   - [Acesso ao Servidor](#4-acesso-ao-servidor)
 - [Como Atualizar o Servidor de Palworld](#como-atualizar-o-servidor-de-palworld)
+- [Como Atualizar a Imagem do Docker](#como-atualizar-a-imagem-do-docker)
 - [Como Alterar as Configurações do Servidor de Palworld](#como-alterar-as-configurações-do-servidor-de-palworld)
   - [Método 1](#método-1)
   - [Método 2](#método-2)
   - [Lista dos Parâmetros de Configuração do Servidor Dedicado do Palworld](#1-lista-dos-parâmetros-de-configuração-do-servidor-dedicado-do-palworld)
   - [Lista de Comandos de Administrador do Servidor Dedicado do Palworld](#2-lista-de-comandos-de-administrador-do-servidor-dedicado-do-palworld)
+- [Como Fazer Backup Automático e Restaurar Saves do Servidor de Palworld](#como-fazer-backup-automatico-e-restaurar-saves-do-servidor-de-palworld)
 
 # INTRODUÇÃO
 Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer momento, sem depender do seu PC ou internet pessoal. Este guia aborda a criação de um servidor utilizando serviços de nuvem como Oracle Cloud, Google Cloud, AWS e Hostinger.
@@ -131,6 +133,38 @@ Confira se você está como usuário root e se está no mesmo diretório do arqu
 ```
 sudo docker compose restart
 ```
+
+# COMO ATUALIZAR A IMAGEM DO DOCKER
+### Para Usuários do Windows:
+  - **Acesse a Interface Gráfica do Docker:**
+    - Navegue até 'Containers' e exclua o container atual clicando no ícone da lixeira.
+    - Em seguida, vá até 'Imagens', localize a imagem do servidor Palworld, clique nos três pontos e selecione 'Pull' para atualizar a imagem.
+
+### Para Usuários do Linux ou Linha de Comando:
+> **Comandos úteis:**
+>   - Ver a lista de containers:
+>   ```
+>   docker container list
+>   ```
+>   - Encontrar o diretório do servidor:
+>   ```
+>   docker container inspect palworld-server -f '{{ json .Mounts }}'
+>   ```
+  1. Abra o terminal na pasta do Docker Compose.
+  2. Pare e remova o container do servidor:
+        ```
+        docker stop palworld-server
+        docker rm palworld-server
+        ```
+  3. Atualize a imagem do servidor:
+        ```
+        docker pull thijsvanloef/palworld-server-docker:latest
+        ```
+  4. Certifique-se de que seu arquivo [docker-compose.yml](/docker-compose.yml) está atualizado com as configurações mais recentes.
+  5. Recrie o container com o comando:
+        ```
+        docker compose up -d
+        ```
 
 # COMO ALTERAR AS CONFIGURAÇÕES DO SERVIDOR DE PALWORLD
 [![Como Alterar as Configurações do seu Servidor Dedicado de Palworld](https://github.com/TechBeme/Palworld/assets/101749351/243722b4-e1d2-425d-9735-55ac86222cfd)](https://youtu.be/GK9mh071Mzs)
@@ -261,41 +295,10 @@ Estes comandos de administração do servidor de Palworld são utilizados dentro
 | /Info                                     | Mostra informações do servidor.                                                                                                                                                                                                       |
 | /Save                                     | Salva manualmente os dados do jogo, como a progressão dos jogadores e criaturas.                                                                                                                                                      |
 
-# COMO ATUALIZAR A IMAGEM DO DOCKER
 
-### Para Usuários do Windows:
-  - **Acesse a Interface Gráfica do Docker:**
-    - Navegue até 'Containers' e exclua o container atual clicando no ícone da lixeira.
-    - Em seguida, vá até 'Imagens', localize a imagem do servidor Palworld, clique nos três pontos e selecione 'Pull' para atualizar a imagem.
-
-### Para Usuários do Linux ou Linha de Comando:
-> **Comandos úteis:**
->   - Ver a lista de containers:
->   ```
->   docker container list
->   ```
->   - Encontrar o diretório do servidor:
->   ```
->   docker container inspect palworld-server -f '{{ json .Mounts }}'
->   ```
-  1. Abra o terminal na pasta do Docker Compose.
-  2. Pare e remova o container do servidor:
-        ```
-        docker stop palworld-server
-        docker rm palworld-server
-        ```
-  3. Atualize a imagem do servidor:
-        ```
-        docker pull thijsvanloef/palworld-server-docker:latest
-        ```
-  4. Certifique-se de que seu arquivo [docker-compose.yml](/docker-compose.yml) está atualizado com as configurações mais recentes.
-  5. Recrie o container com o comando:
-        ```
-        docker compose up -d
-        ```
 
 # COMO FAZER BACKUP AUTOMÁTICO E RESTAURAR SAVES DO SERVIDOR DE PALWORLD
 Este guia ensina como realizar backups automáticos e manuais do seu servidor dedicado de Palworld, além de como restaurar saves antigos.
-Primeiro, precisamos atualizar nossa imagem do Docker para garantir que estamos usando a versão mais recente do servidor: 
+Primeiro, precisamos atualizar nossa imagem do Docker para garantir que estamos usando a versão mais recente: [Como Atualizar a Imagem do Docker](COMO_ATUALIZAR_A_IMAGEM_DO_DOCKER)
       
       
