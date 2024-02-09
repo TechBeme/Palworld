@@ -261,3 +261,40 @@ Estes comandos de administração do servidor de Palworld são utilizados dentro
 | /Info                                     | Mostra informações do servidor.                                                                                                                                                                                                       |
 | /Save                                     | Salva manualmente os dados do jogo, como a progressão dos jogadores e criaturas.                                                                                                                                                      |
 
+# COMO ATUALIZAR A IMAGEM DO DOCKER
+
+### Para Usuários do Windows:
+  - **Acesse a Interface Gráfica do Docker:**
+    - Navegue até 'Containers' e exclua o container atual clicando no ícone da lixeira.
+    - Em seguida, vá até 'Imagens', localize a imagem do servidor Palworld, clique nos três pontos e selecione 'Pull' para atualizar a imagem.
+
+### Para Usuários do Linux ou Linha de Comando:
+  1. **Comandos úteis:**
+        - Ver a lista de containers:
+        ```
+        docker container list
+        ```
+        - Encontrar o diretório do servidor:
+        ```
+        docker container inspect palworld-server -f '{{ json .Mounts }}'
+        ```
+  2. Abra o terminal na pasta do Docker Compose.
+  3. Pare e remova o container do servidor:
+        ```
+        docker stop palworld-server
+        docker rm palworld-server
+        ```
+  4. Atualize a imagem do servidor:
+        ```
+        docker pull thijsvanloef/palworld-server-docker:latest
+        ```
+  5. Certifique-se de que seu [docker-compose.yml](/docker-compose.yml) está com as configurações mais recentes e crie novamente o container:
+        ```
+        docker compose up -d
+        ```
+
+# COMO FAZER BACKUP AUTOMÁTICO E RESTAURAR SAVES DO SERVIDOR DE PALWORLD
+Este guia ensina como realizar backups automáticos e manuais do seu servidor dedicado de Palworld, além de como restaurar saves antigos.
+Primeiro, precisamos atualizar nossa imagem do Docker para garantir que estamos usando a versão mais recente do servidor: 
+      
+      
