@@ -278,17 +278,18 @@ Estes comandos de administração do servidor de Palworld são utilizados dentro
         ```
         docker container inspect palworld-server -f '{{ json .Mounts }}'
         ```
-  2. Abra o terminal na pasta do Docker Compose.
-  3. Pare e remova o container do servidor:
+  1. Abra o terminal na pasta do Docker Compose.
+  2. Pare e remova o container do servidor:
         ```
         docker stop palworld-server
         docker rm palworld-server
         ```
-  4. Atualize a imagem do servidor:
+  3. Atualize a imagem do servidor:
         ```
         docker pull thijsvanloef/palworld-server-docker:latest
         ```
-  5. Certifique-se de que seu [docker-compose.yml](/docker-compose.yml) está com as configurações mais recentes e crie novamente o container:
+  4. Certifique-se de que seu arquivo [docker-compose.yml](/docker-compose.yml) está atualizado com as configurações mais recentes.
+  5. Recrie o container com o comando:
         ```
         docker compose up -d
         ```
