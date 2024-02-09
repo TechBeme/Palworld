@@ -322,9 +322,9 @@ Este guia ensina como realizar backups automáticos e manuais do seu servidor de
     docker compose down
     ```
   - Localize o backup que deseja restaurar em ```/servdior/backups/``` e descompacte o arquivo.
-  - Delete a pasta com as configurações atuais do servidor: ```palworld/Pal/Saved/SaveGames/0/<hash_antigo>```.
-  - Copie o conteúdo da pasta de backup ```Saved/SaveGames/0/<hash_novo>``` para ```palworld/Pal/Saved/SaveGames/0/<hash_novo>```.
-  - Substitua o ```DedicatedServerName``` dentro de ```palworld/Pal/Saved/Config/LinuxServer/GameUserSettings.ini``` pelo novo nome da pasta.
+  - Delete a pasta com as configurações atuais do servidor: ```servidor/Pal/Saved/SaveGames/0/<hash_antigo>```.
+  - Copie o conteúdo da pasta de backup ```Saved/SaveGames/0/<hash_novo>``` para ```servidor/Pal/Saved/SaveGames/0/<hash_novo>```.
+  - Substitua o ```DedicatedServerName``` dentro de ```servidor/Pal/Saved/Config/LinuxServer/GameUserSettings.ini``` pelo novo nome da pasta.
     ```
     DedicatedServerName=<hash_novo>  # Substitua pelo nome da sua pasta.
     ```
