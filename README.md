@@ -300,5 +300,34 @@ Estes comandos de administração do servidor de Palworld são utilizados dentro
 # COMO FAZER BACKUP AUTOMÁTICO E RESTAURAR SAVES DO SERVIDOR DE PALWORLD
 Este guia ensina como realizar backups automáticos e manuais do seu servidor dedicado de Palworld, além de como restaurar saves antigos.
 Primeiro, precisamos atualizar nossa imagem do Docker para garantir que estamos usando a versão mais recente: [Como Atualizar a Imagem do Docker](COMO_ATUALIZAR_A_IMAGEM_DO_DOCKER)
-      
-      
+
+### 1. Criar um Backup
+  - Para criar um backup do save do jogo no momento atual, use o comando:
+    ```
+    docker exec palworld-server backup
+    ```
+    O servidor executará um save antes do backup se o RCON estiver habilitado e criará um backup em ```/palworld/backups/```.
+    
+### 2. Restaurar de um Backup
+  - Para restaurar a partir de um backup, use o comando:
+    ```
+    docker exec -it palworld-server restore
+    ```
+    Agora basta selecionar qual backup você quer resturar.
+
+### 3. Restaurar um Backup Manualmente
+  - Pare o servidor:
+    ```
+    docker compose down
+    ```
+  - Localize o backup que deseja restaurar em ```/servdior/backups/``` e descompacte o arquivo.
+  - Delete a pasta com as configurações atuais do servidor: ```palworld/Pal/Saved/SaveGames/0/<hash_antigo>```.
+  - Copie o conteúdo da pasta de backup ```Saved/SaveGames/0/<hash_novo>``` para ```palworld/Pal/Saved/SaveGames/0/<hash_novo>```.
+  - Substitua o ```DedicatedServerName``` dentro de ```palworld/Pal/Saved/Config/LinuxServer/GameUserSettings.ini``` pelo novo nome da pasta.
+    ```
+    DedicatedServerName=<hash_novo>  # Substitua pelo nome da sua pasta.
+    ```
+  - Reinicie o servidor.
+    ```
+    docker compose up -d
+    ```
