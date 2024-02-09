@@ -328,7 +328,7 @@ Este guia ensina como realizar backups automáticos e manuais do seu servidor de
     ```
     DedicatedServerName=<hash_novo>  # Substitua pelo nome da sua pasta.
     ```
-  - Reinicie o servidor.
+  - Reinicie o servidor:
     ```
     docker compose up -d
     ```
