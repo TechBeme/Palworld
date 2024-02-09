@@ -269,15 +269,15 @@ Estes comandos de administração do servidor de Palworld são utilizados dentro
     - Em seguida, vá até 'Imagens', localize a imagem do servidor Palworld, clique nos três pontos e selecione 'Pull' para atualizar a imagem.
 
 ### Para Usuários do Linux ou Linha de Comando:
-  1. **Comandos úteis:**
-        - Ver a lista de containers:
-        ```
-        docker container list
-        ```
-        - Encontrar o diretório do servidor:
-        ```
-        docker container inspect palworld-server -f '{{ json .Mounts }}'
-        ```
+> **Comandos úteis:**
+>   - Ver a lista de containers:
+>   ```
+>   docker container list
+>   ```
+>   - Encontrar o diretório do servidor:
+>   ```
+>   docker container inspect palworld-server -f '{{ json .Mounts }}'
+>   ```
   1. Abra o terminal na pasta do Docker Compose.
   2. Pare e remova o container do servidor:
         ```
