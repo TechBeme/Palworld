@@ -314,7 +314,7 @@ Este guia ensina como realizar backups automáticos e manuais do seu servidor de
     ```
     docker exec -it palworld-server restore
     ```
-    Agora basta selecionar qual backup você quer resturar.
+    Agora basta selecionar qual backup você quer restaurar.
 
 ### 3. Restaurar um Backup Manualmente
   - Pare o servidor:
