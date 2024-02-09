@@ -298,8 +298,9 @@ Estes comandos de administração do servidor de Palworld são utilizados dentro
 
 
 # COMO FAZER BACKUP AUTOMÁTICO E RESTAURAR SAVES DO SERVIDOR DE PALWORLD
+> [!ALERT]
+> Primeiro, atualize sua imagem do Docker para a versão mais recente: [Como Atualizar a Imagem do Docker](#como-atualizar-a-imagem-do-docker)
 Este guia ensina como realizar backups automáticos e manuais do seu servidor dedicado de Palworld, além de como restaurar saves antigos.
-Primeiro, precisamos atualizar nossa imagem do Docker para garantir que estamos usando a versão mais recente: [Como Atualizar a Imagem do Docker](#como-atualizar-a-imagem-do-docker)
 
 ### 1. Criar um Backup
   - Para criar um backup do save do jogo no momento atual, use o comando:
