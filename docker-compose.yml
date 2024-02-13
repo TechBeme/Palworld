@@ -20,6 +20,11 @@ services:
          - SERVER_DESCRIPTION=Descrição do servidor
          #- SERVER_PASSWORD= # Senha do servidor. (obs: remova o Hashtag antes de "- SERVER_PASSWORD" para utilizar a senha)
          - ADMIN_PASSWORD=admin # Senha do administrador.
+         # Caso queira eidtar as configurações do servidor, coloque os comandos abaixo: 
+         - DEATH_PENALTY=Item #Penalidade por morte: Nenhum: Sem penalidade por morte; Item: Larga itens exceto equipamentos; ItemAndEquipment: Larga todos os itens; All: Larga todos os PALs e todos os itens.
+         - ENABLE_INVADER_ENEMY=True # Ligar/desligar invasões
+         - PAL_EGG_DEFAULT_HATCHING_TIME=1 # Tempo em horas para incubar os ovos.
+         # Caso queira eidtar as configurações do servidor, coloque os comandos abaixo: 
          - DISCORD_WEBHOOK_URL= # Insira a sua webhook do discord, algo tipo: https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
          - DISCORD_PRE_UPDATE_BOOT_MESSAGE=Em fase de expansão... O pal tá aumentando seu poder!
          - DISCORD_POST_UPDATE_BOOT_MESSAGE=Atualização completa! O pal tá no ponto, mais firme e forte do que nunca.
