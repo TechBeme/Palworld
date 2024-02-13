@@ -172,79 +172,71 @@ sudo docker compose restart
 Este guia explica como alterar várias configurações no seu servidor dedicado de Palworld, por exemplo, desativar o drop de itens ao morrer, reduzir o tempo de incubação de ovos e acelerar o crafting.
 ATENÇÃO!!!
 > [!WARNING]
-> NÃO É MAIS NECESSÁRIO ALTERAR O ARQUIVO ```PalWorldSettings.ini```!
+> NÃO É MAIS NECESSÁRIO ALTERAR O ARQUIVO ```PalWorldSettings.ini```
+>
+> Agora é possível alterar as configurações diretamente no seu [docker-compose.yml](/docker-compose.yml)
 > 
-> PRIMEIRO, É NECESSÁRIO ATUALIZAR SUA IMAGEM DO DOCKER CONFORME ESSE GUIA: [Como Atualizar a Imagem do Docker](#como-atualizar-a-imagem-do-docker)
-> 
-> Agora é possível alterar as configurações diretamente no seu [docker-compose.yml](/docker-compose.yml).
+> ENTRETANTO, PRIMEIRO É  NECESSÁRIO ATUALIZAR SUA IMAGEM DO DOCKER CONFORME ESSE GUIA: [Como Atualizar a Imagem do Docker](#como-atualizar-a-imagem-do-docker)
+
 
 ### 1. Lista dos Parâmetros de Configuração do Servidor Dedicado do Palworld
 Estes parâmetros DEMVEM SER ALTERADOR NO [docker-compose.yml](/docker-compose.yml) (NÃO É NO ```PalWorldSettings.ini```). Estas configurações permitem personalizar a experiência de jogo do servidor.
 
-| Parâmetro                                | Descrição                                                                                          |
-|------------------------------------------|----------------------------------------------------------------------------------------------------|
-| Difficulty                               | Ajusta a dificuldade geral do jogo.                                                                |
-| DayTimeSpeedRate                         | Modifica a velocidade do tempo in-game durante o dia.                                              |
-| NightTimeSpeedRate                       | Modifica a velocidade do tempo in-game durante a noite.                                            |
-| ExpRate                                  | Altera a taxa de ganho de experiência para jogadores e criaturas.                                  |
-| PalCaptureRate                           | Ajusta a taxa na qual criaturas Pal podem ser capturadas.                                          |
-| PalSpawnNumRate                          | Ajusta a taxa na qual criaturas Pal aparecem.                                                      |
-| PalDamageRateAttack                      | Ajusta o dano causado por criaturas Pal.                                                           |
-| PalDamageRateDefense                     | Ajusta o dano recebido por criaturas Pal.                                                          |
-| PlayerDamageRateAttack                   | Ajusta o dano causado pelos jogadores.                                                             |
-| PlayerDamageRateDefense                  | Ajusta o dano recebido pelos jogadores.                                                            |
-| PlayerStomachDecreaseRate                | Ajusta a taxa na qual a fome do jogador aumenta.                                                   |
-| PlayerStaminaDecreaseRate                | Ajusta a taxa na qual a stamina do jogador diminui.                                                |
-| PlayerAutoHPRegeneRate                   | Ajusta a taxa de regeneração automática de saúde do jogador.                                       |
-| PlayerAutoHpRegeneRateInSleep            | Ajusta a taxa de regeneração automática de saúde do jogador durante o sono.                        |
-| PalStomachDecreaseRate                   | Ajusta a taxa na qual a fome dos pals aumenta.                                                     |
-| PalStaminaDecreaseRate                   | Ajusta a taxa na qual a stamina da criatura Pal diminui.                                           |
-| PalAutoHPRegeneRate                      | Ajusta a taxa de regeneração automática de saúde da criatura Pal.                                  |
-| PalAutoHpRegeneRateInSleep               | Ajusta a taxa de regeneração automática de saúde da criatura Pal durante o sono.                   |
-| BuildObjectDamageRate                    | Ajusta a taxa na qual objetos construídos recebem dano.                                            |
-| BuildObjectDeteriorationDamageRate       | Ajusta a taxa na qual objetos construídos se deterioram.                                           |
-| CollectionDropRate                       | Ajusta a taxa de queda de itens coletados.                                                         |
-| CollectionObjectHpRate                   | Ajusta a saúde de objetos coletados.                                                               |
-| CollectionObjectRespawnSpeedRate         | Ajusta a velocidade de respawn de objetos coletados.                                               |
-| EnemyDropItemRate                        | Ajusta a taxa de queda de itens de inimigos derrotados.                                            |
-| DeathPenalty                             | Define a penalidade após a morte do jogador. Valores: 0 ou 'None' (Sem penalidades após a morte), 1 ou 'Item' (Itens na mochila caem ao morrer), 2 ou 'ItemAndEquipment' (Itens na mochila e equipados caem ao morrer), 3 ou 'All' (Itens na mochila e equipados caem, incluindo Pals).           |
-| bEnablePlayerToPlayerDamage              | Habilita ou desabilita o dano de jogador para jogador.                                             |
-| bEnableFriendlyFire                      | Habilita ou desabilita o fogo amigo.                                                               |
-| bEnableInvaderEnemy                      | Habilita ou desabilita inimigos invasores.                                                         |
-| bActiveUNKO                              | Ativa ou desativa UNKO (Unidentified Nocturnal Knock-off).                                         |
-| bEnableAimAssistPad                      | Habilita ou desabilita a assistência de mira para controles.                                       |
-| bEnableAimAssistKeyboard                 | Habilita ou desabilita a assistência de mira para teclados.                                        |
-| DropItemMaxNum                           | Define o número máximo de itens caídos no jogo.                                                    |
-| DropItemMaxNum_UNKO                      | Define o número máximo de itens UNKO caídos no jogo.                                               |
-| BaseCampMaxNum                           | Define o número máximo de acampamentos base que podem ser construídos.                             |
-| BaseCampWorkerMaxNum                     | Define o número máximo de trabalhadores em um acampamento base.                                    |
-| DropItemAliveMaxHours                    | Define o tempo máximo que itens permanecem ativos após serem caídos.                               |
-| bAutoResetGuildNoOnlinePlayers           | Reseta automaticamente guildas sem jogadores online.                                               |
-| AutoResetGuildTimeNoOnlinePlayers        | Define o tempo após o qual guildas sem jogadores online são resetadas automaticamente.             |
-| GuildPlayerMaxNum                        | Define o número máximo de jogadores em uma guilda.                                                 |
-| PalEggDefaultHatchingTime                | Define o tempo padrão de incubação para ovos de Pal.                                               |
-| WorkSpeedRate                            | Ajusta a velocidade geral de trabalho no jogo.                                                     |
-| bIsMultiplay                             | Ativa ou desativa o modo multijogador.                                                             |
-| bIsPvP                                   | Ativa ou desativa o modo jogador contra jogador (PvP).                                             |
-| bCanPickupOtherGuildDeathPenaltyDrop     | Ativa ou desativa a coleta de itens de penalidade de morte de outras guildas.                      |
-| bEnableNonLoginPenalty                   | Ativa ou desativa penalidades para não login.                                                      |
-| bEnableFastTravel                        | Ativa ou desativa a viagem rápida.                                                                 |
-| bIsStartLocationSelectByMap              | Ativa ou desativa a seleção de locais de início no mapa.                                           |
-| bExistPlayerAfterLogout                  | Ativa ou desativa a existência de jogadores após o logout.                                         |
-| bEnableDefenseOtherGuildPlayer           | Ativa ou desativa a defesa de jogadores de outras guildas.                                         |
-| CoopPlayerMaxNum                         | Define o número máximo de jogadores cooperativos em uma sessão.                                    |
-| ServerPlayerMaxNum                       | Define o número máximo de jogadores permitidos no servidor.                                        |
-| ServerName                               | Define o nome do servidor Palworld.                                                                |
-| ServerDescription                        | Fornece uma descrição para o servidor Palworld.                                                    |
-| AdminPassword                            | Define a senha para administração do servidor.                                                     |
-| ServerPassword                           | Define a senha para entrar no servidor Palworld.                                                   |
-| PublicPort                               | Define a porta pública para o servidor Palworld.                                                   |
-| PublicIP                                 | Define o endereço IP público para o servidor Palworld.                                             |
-| RCONEnabled                              | Ativa ou desativa o Console Remoto (RCON) para administração do servidor.                          |
-| RCONPort                                 | Define a porta para comunicação do Console Remoto (RCON).                                          |
-| Region                                   | Define a região do servidor Palworld.                                                              |
-| bUseAuth                                 | Ativa ou desativa a autenticação do servidor.                                                      |
-| BanListURL                               | Define a URL para a lista de banidos do servidor.                                                  |
+| parâmetros                                | Descrição                                                          | Valor Padrão                                                                                 | Valor Permitido                        |
+|-------------------------------------------|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------|----------------------------------------|
+| DIFFICULTY                                | Dificuldade do jogo                                                | None                                                                                         | `None`,`Normal`,`Difficult`            |
+| DAYTIME_SPEEDRATE                         | Velocidade do dia - Números menores significam dias mais curtos    | 1.000000                                                                                     | Número Decimal                         |
+| NIGHTTIME_SPEEDRATE                       | Velocidade da noite - Números menores significam noites mais curtas| 1.000000                                                                                     | Número Decimal                         |
+| EXP_RATE                                  | Taxa de ganho de EXP                                               | 1.000000                                                                                     | Número Decimal                         |
+| PAL_CAPTURE_RATE                          | Taxa de captura de Pal                                             | 1.000000                                                                                     | Número Decimal                         |
+| PAL_SPAWN_NUM_RATE                        | Taxa de aparição de Pal                                            | 1.000000                                                                                     | Número Decimal                         |
+| PAL_DAMAGE_RATE_ATTACK                    | Multiplicador de dano de Pals                                      | 1.000000                                                                                     | Número Decimal                         |
+| PAL_DAMAGE_RATE_DEFENSE                   | Multiplicador de dano em Pals                                      | 1.000000                                                                                     | Número Decimal                         |
+| PLAYER_DAMAGE_RATE_ATTACK                 | Multiplicador de dano do jogador                                   | 1.000000                                                                                     | Número Decimal                         |
+| PLAYER_DAMAGE_RATE_DEFENSE                | Multiplicador de dano no jogador                                   | 1.000000                                                                                     | Número Decimal                         |
+| PLAYER_STOMACH_DECREASE_RATE              | Taxa de esgotamento da fome do jogador                             | 1.000000                                                                                     | Número Decimal                         |
+| PLAYER_STAMINA_DECREASE_RATE              | Taxa de redução de stamina do jogador                              | 1.000000                                                                                     | Número Decimal                         |
+| PLAYER_AUTO_HP_REGEN_RATE                 | Taxa de regeneração automática de HP do jogador                    | 1.000000                                                                                     | Número Decimal                         |
+| PLAYER_AUTO_HP_REGEN_RATE_IN_SLEEP        | Taxa de regeneração de HP do jogador durante o sono                | 1.000000                                                                                     | Número Decimal                         |
+| PAL_STOMACH_DECREASE_RATE                 | Taxa de esgotamento da fome de Pal                                 | 1.000000                                                                                     | Número Decimal                         |
+| PAL_STAMINA_DECREASE_RATE                 | Taxa de redução de stamina de Pal                                  | 1.000000                                                                                     | Número Decimal                         |
+| PAL_AUTO_HP_REGEN_RATE                    | Taxa de regeneração automática de HP de Pal                        | 1.000000                                                                                     | Número Decimal                         |
+| PAL_AUTO_HP_REGEN_RATE_IN_SLEEP           | Taxa de regeneração de saúde de Pal durante o sono (em Palbox)     | 1.000000                                                                                     | Número Decimal                         |
+| BUILD_OBJECT_DAMAGE_RATE                  | Multiplicador de dano em estruturas                                | 1.000000                                                                                     | Número Decimal                         |
+| BUILD_OBJECT_DETERIORATION_DAMAGE_RATE    | Taxa de deterioração de estruturas                                 | 1.000000                                                                                     | Número Decimal                         |
+| COLLECTION_DROP_RATE                      | Multiplicador de itens coletáveis                                  | 1.000000                                                                                     | Número Decimal                         |
+| COLLECTION_OBJECT_HP_RATE                 | Multiplicador de HP de objetos coletáveis                          | 1.000000                                                                                     | Número Decimal                         |
+| COLLECTION_OBJECT_RESPAWN_SPEED_RATE      | Intervalo de reaparecimento de objetos coletáveis - Quanto menor o número, mais rápida a regeneração | 1.000000                                                   | Número Decimal                         |
+| ENEMY_DROP_ITEM_RATE                      | Multiplicador de itens largados por inimigos                       | 1.000000                                                                                     | Número Decimal                         |
+| DEATH_PENALTY                             | Penalidade por morte</br>Nenhum: Sem penalidade por morte</br>Item: Larga itens exceto equipamentos</br>ItemAndEquipment: Larga todos os itens</br>All: Larga todos os PALs e todos os itens. | All        | `None`,`Item`,`ItemAndEquipment`,`All` |
+| ENABLE_PLAYER_TO_PLAYER_DAMAGE            | Permite que jogadores causem dano a outros jogadores               | False                                                                                        | Verdadeiro ou Falso                    |
+| ENABLE_FRIENDLY_FIRE                      | Permite fogo amigo                                                 | False                                                                                        | Verdadeiro ou Falso                    |
+| ENABLE_INVADER_ENEMY                      | Habilita invasores                                                 | True                                                                                         | Verdadeiro ou Falso                    |
+| ACTIVE_UNKO                               | Habilita UNKO (?)                                                  | False                                                                                        | Verdadeiro ou Falso                    |
+| ENABLE_AIM_ASSIST_PAD                     | Habilita assistência de mira para controle                         | True                                                                                         | Verdadeiro ou Falso                    |
+| ENABLE_AIM_ASSIST_KEYBOARD                | Habilita assistência de mira para teclado                          | False                                                                                        | Verdadeiro ou Falso                    |
+| DROP_ITEM_MAX_NUM                         | Número máximo de itens soltos no mundo                             | 3000                                                                                         | Integer                                |
+| DROP_ITEM_MAX_NUM_UNKO                    | Número máximo de solturas de UNKO no mundo                         | 100                                                                                          | Integer                                |
+| BASE_CAMP_MAX_NUM                         | Número máximo de acampamentos base                                 | 128                                                                                          | Integer                                |
+| BASE_CAMP_WORKER_MAX_NUM                  | Número máximo de trabalhadores                                     | 15                                                                                           | Integer                                |
+| DROP_ITEM_ALIVE_MAX_HOURS                 | Tempo até os itens desaparecerem em horas                          | 1.000000                                                                                     | Número Decimal                         |
+| AUTO_RESET_GUILD_NO_ONLINE_PLAYERS        | Reseta automaticamente a guilda quando nenhum jogador está online  | False                                                                                        | Verdadeiro ou Falso                    |
+| AUTO_RESET_GUILD_TIME_NO_ONLINE_PLAYERS   | Tempo para resetar automaticamente a guilda quando nenhum jogador está online | 72.000000                                                                         | Número Decimal                         |
+| GUILD_PLAYER_MAX_NUM                      | Número máximo de jogadores na Guilda                               | 20                                                                                           | Integer                                |
+| PAL_EGG_DEFAULT_HATCHING_TIME             | Tempo (h) para incubar ovo massivo                                 | 72.000000                                                                                    | Número Decimal                         |
+| WORK_SPEED_RATE                           | Multiplicador de velocidade de trabalho                            | 1.000000                                                                                     | Número Decimal                         |
+| IS_MULTIPLAY                              | Habilita multijogador                                              | False                                                                                        | Verdadeiro ou Falso                    |
+| IS_PVP                                    | Habilita PVP                                                       | False                                                                                        | Verdadeiro ou Falso                    |
+| CAN_PICKUP_OTHER_GUILD_DEATH_PENALTY_DROP | Permite que jogadores de outras guildas peguem itens de penalidade por morte | False                                                                              | Verdadeiro ou Falso                    |
+| ENABLE_NON_LOGIN_PENALTY                  | Habilita penalidade por não entrar                                 | True                                                                                         | Verdadeiro ou Falso                    |
+| ENABLE_FAST_TRAVEL                        | Habilita viagem rápida                                             | True                                                                                         | Verdadeiro ou Falso                    |
+| IS_START_LOCATION_SELECT_BY_MAP           | Habilita seleção de local de início                                | True                                                                                         | Verdadeiro ou Falso                    |
+| EXIST_PLAYER_AFTER_LOGOUT                 | Alternância para deletar jogadores quando eles saem                | False                                                                                        | Verdadeiro ou Falso                    |
+| ENABLE_DEFENSE_OTHER_GUILD_PLAYER         | Permite defesa contra jogadores de outras guildas                  | False                                                                                        | Verdadeiro ou Falso                    |
+| COOP_PLAYER_MAX_NUM                       | Número máximo de jogadores em uma guilda                           | 4                                                                                            | Integer                                |
+| REGION                                    | Região                                                             |                                                                                              | String                                 |
+| USEAUTH                                   | Usa autenticação                                                   | True                                                                                         | Verdadeiro ou Falso                    |
+| BAN_LIST_URL                              | Qual lista de banimento usar                                       | [https://api.palworldgame.com/api/banlist.txt](https://api.palworldgame.com/api/banlist.txt) | string                                 |
 
 ### 2. Lista de Comandos de Administrador do Servidor Dedicado do Palworld
 Estes comandos de administração do servidor de Palworld são utilizados dentro do jogo, através do chat, permitindo ao administrador gerenciar e controlar diversos aspectos do servidor em tempo real.
