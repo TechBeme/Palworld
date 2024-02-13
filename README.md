@@ -78,31 +78,40 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
 - **Insira as configurações do servidor de sua preferência.**
    - Exemplo de configuração:
    ```yml
-   services:
-      palworld:
-         image: thijsvanloef/palworld-server-docker:latest
-         restart: unless-stopped
-         container_name: palworld-server
-         ports:
-           - 8211:8211/udp
-           - 27015:27015/udp
-         environment:
-            - PUID=1000
-            - PGID=1000
-            - PORT=8211
-            - PLAYERS=16 # Número de vagas do servidor
-            - MULTITHREADING=true
-            - RCON_ENABLED=true
-            - RCON_PORT=25575
-            - TZ=UTC-3
-            - COMMUNITY=true  # Mostra o seu servidor na listagem da comunidade.
-            - SERVER_NAME=Nome do servidor
-            - SERVER_DESCRIPTION=Descrição do servidor
-            #- SERVER_PASSWORD= # Senha do servidor. (obs: remova o Hashtag antes de "- SERVER_PASSWORD" para utilizar a senha)
-            - ADMIN_PASSWORD=admin # Senha do administrador.
-            - DISCORD_WEBHOOK_URL= # Insira a sua webhook do discord, algo tipo: https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-         volumes:
-            - ./servidor:/palworld/
+    services:
+       palworld:
+          image: thijsvanloef/palworld-server-docker:latest
+          restart: unless-stopped
+          container_name: palworld-server
+          ports:
+            - 8211:8211/udp
+            - 27015:27015/udp
+          environment:
+             - PUID=1000
+             - PGID=1000
+             - PORT=8211
+             - PLAYERS=16 # Número de vagas do servidor
+             - MULTITHREADING=true
+             - RCON_ENABLED=true
+             - RCON_PORT=25575
+             - TZ=UTC-3
+             - COMMUNITY=true  # Mostra o seu servidor na listagem da comunidade.
+             - SERVER_NAME=Nome do servidor
+             - SERVER_DESCRIPTION=Descrição do servidor
+             #- SERVER_PASSWORD= # Senha do servidor. (obs: remova o Hashtag antes de "- SERVER_PASSWORD" para utilizar a senha)
+             - ADMIN_PASSWORD=admin # Senha do administrador.
+             # Caso queira eidtar as configurações do servidor, coloque os comandos abaixo: 
+             - DEATH_PENALTY=Item #Penalidade por morte: Nenhum: Sem penalidade por morte; Item: Larga itens exceto equipamentos; ItemAndEquipment: Larga todos os itens; All: Larga todos os PALs e todos os itens.
+             - ENABLE_INVADER_ENEMY=True # Ligar/desligar invasões
+             - PAL_EGG_DEFAULT_HATCHING_TIME=1 # Tempo em horas para incubar os ovos.
+             - DISCORD_WEBHOOK_URL= # Insira a sua webhook do discord, algo tipo: https://discord.com/api/webhooks/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+             - DISCORD_PRE_UPDATE_BOOT_MESSAGE=Em fase de expansão... O pal tá aumentando seu poder!
+             - DISCORD_POST_UPDATE_BOOT_MESSAGE=Atualização completa! O pal tá no ponto, mais firme e forte do que nunca.
+             - DISCORD_PRE_START_MESSAGE=O pal acordou! Pronto para a caça, firme e forte.
+             - DISCORD_PRE_SHUTDOWN_MESSAGE=Desligando... O pal tá exausto, precisa de um tempo.
+             - DISCORD_POST_SHUTDOWN_MESSAGE=Segura que o pal está caindo... brochou!
+          volumes:
+             - ./servidor:/palworld/
    ```
    - Defina a porta, número de jogadores, senha e outras configurações.
    - Acesse a documentação completa [aqui](https://github.com/thijsvanloef/palworld-server-docker).
