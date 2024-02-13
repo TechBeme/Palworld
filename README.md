@@ -11,8 +11,6 @@
 - [Como Atualizar o Servidor de Palworld](#como-atualizar-o-servidor-de-palworld)
 - [Como Atualizar a Imagem do Docker](#como-atualizar-a-imagem-do-docker)
 - [Como Alterar as Configurações do Servidor de Palworld](#como-alterar-as-configurações-do-servidor-de-palworld)
-  - [Método 1](#método-1)
-  - [Método 2](#método-2)
   - [Lista dos Parâmetros de Configuração do Servidor Dedicado do Palworld](#1-lista-dos-parâmetros-de-configuração-do-servidor-dedicado-do-palworld)
   - [Lista de Comandos de Administrador do Servidor Dedicado do Palworld](#2-lista-de-comandos-de-administrador-do-servidor-dedicado-do-palworld)
 - [Como Fazer Backup Automático e Restaurar Saves do Servidor de Palworld](#como-fazer-backup-automático-e-restaurar-saves-do-servidor-de-palworld)
