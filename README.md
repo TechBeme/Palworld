@@ -170,48 +170,16 @@ sudo docker compose restart
 [![Como Alterar as Configurações do seu Servidor Dedicado de Palworld](https://github.com/TechBeme/Palworld/assets/101749351/243722b4-e1d2-425d-9735-55ac86222cfd)](https://youtu.be/GK9mh071Mzs)
 
 Este guia explica como alterar várias configurações no seu servidor dedicado de Palworld, por exemplo, desativar o drop de itens ao morrer, reduzir o tempo de incubação de ovos e acelerar o crafting.
-
+ATENÇÃO!!!
 > [!WARNING]
-> Atenção, qualquer parâmetro definido na seção environment do arquivo [docker-compose.yml](/docker-compose.yml) terá prioridade sobre as configurações presentes no arquivo PalWorldSettings.ini. Isso significa que, se uma configuração específica for definida tanto no Docker quanto no arquivo PalWorldSettings.ini, a configuração do Docker Compose será a que prevalecerá no servidor. Caso prefira gerenciar as configurações diretamente pelo arquivo PalWorldSettings.ini, é importante remover ou comentar as linhas correspondentes na seção environment do seu docker-compose.yml.
+> NÃO É MAIS NECESSÁRIO ALTERAR O ARQUIVO ```PalWorldSettings.ini```!
+> 
+> PRIMEIRO, É NECESSÁRIO ATUALIZAR SUA IMAGEM DO DOCKER CONFORME ESSE GUIA: [Como Atualizar a Imagem do Docker](#como-atualizar-a-imagem-do-docker)
+> 
+> Agora é possível alterar as configurações diretamente no seu [docker-compose.yml](/docker-compose.yml).
 
-### Método 1:
-- Acesse a pasta do seu servidor (se você criou o servidor na versão mais atual do [docker-compose.yml](/docker-compose.yml) ela irá chamar "servidor", caso contrário será "palworld").
-- Copie o conteúdo do arquivo DefaultPalWorldSettings.ini para PalWorldSettings.ini com o comando:
-   ```
-   sudo cp DefaultPalWorldSettings.ini Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
-   ```
-- Abra o arquivo de Configuração com:
-   ```
-   sudo nano Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
-   ```
-- O arquivo PalWorldSettings.ini agora contém as configurações padrão. Altere conforme sua preferência.
-- Para salvar basta pressionar "Ctrl + X", digitar "y" e pressionar "Enter".
-- Após fazer as alterações, reinicie o servidor para que as novas configurações tenham efeito.
-   ```
-   sudo docker compose restart
-   ```
-### Método 2:
-- Acesse a pasta do seu servidor (se você criou o servidor na versão mais atual do [docker-compose.yml](/docker-compose.yml) ela irá chamar "servidor", caso contrário será "palworld").
-- Faça o upload do arquivo DefaultPalWorldSettings.ini para a nuvem:
-   ```
-   curl --upload-file DefaultPalWorldSettings.ini https://transfer.sh/DefaultPalWorldSettings.ini
-   ```
-- Copie o link fornecido e baixe o arquivo no seu PC.
-- Edite o arquivo no seu PC (por exemplo, com o Notepad) e copie o conteúdo editado.
-- Remove o arquivo PalWorldSettings.ini do seu servidor e crie um novo com os comandos:
-   ```
-   sudo rm Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
-   sudo nano Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
-   ```
-- Cole o código que você alterou no seu PC.
-- Para salvar basta pressionar "Ctrl + X", digitar "y" e pressionar "Enter".
-- Após fazer as alterações, reinicie o servidor para que as novas configurações tenham efeito.
-   ```
-   sudo docker compose restart
-   ```
 ### 1. Lista dos Parâmetros de Configuração do Servidor Dedicado do Palworld
-Estes parâmetros devem ser alterados nos arquivos do servidor, especificamente no arquivo PalWorldSettings.ini. Estas configurações permitem personalizar a experiência de jogo do servidor.
-
+Estes parâmetros DEMVEM SER ALTERADOR NO [docker-compose.yml](/docker-compose.yml) (NÃO É NO ```PalWorldSettings.ini```). Estas configurações permitem personalizar a experiência de jogo do servidor.
 
 | Parâmetro                                | Descrição                                                                                          |
 |------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -332,3 +300,9 @@ Este guia ensina como realizar backups automáticos e manuais do seu servidor de
     ```
     docker compose up -d
     ```
+
+> - Para transferir o backup para o seu PC ou outro servidor basta utlizar este comando na pasta de backup:
+>   ```
+>   curl --upload-file <nome do backup> https://transfer.sh/<nome do backup>
+>   ```
+> - Copie o link fornecido e baixe o arquivo no seu PC ou no outro servidor.
