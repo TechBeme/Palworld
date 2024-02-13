@@ -117,8 +117,6 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
    - Acesse a documentação completa [aqui](https://github.com/thijsvanloef/palworld-server-docker).
 - **Salve o Arquivo de Configuração.**
 - **Crie o servidor:**
-  > Atenção: Não utilize esse comando para iniciar o servidor, ele é apenas para criar o servidor.
-  > Para iniciar utilize o comando ```sudo docker compose start```.
    ```
    sudo docker compose up
    ```
