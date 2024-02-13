@@ -185,7 +185,10 @@ ATENÇÃO!!!
 
 
 ### 1. Lista dos Parâmetros de Configuração do Servidor Dedicado do Palworld
-Estes parâmetros DEMVEM SER ALTERADOR NO [docker-compose.yml](/docker-compose.yml) (NÃO É NO ```PalWorldSettings.ini```). Estas configurações permitem personalizar a experiência de jogo do servidor.
+Estes parâmetros DEVEM SER ALTERADOS NO [docker-compose.yml](/docker-compose.yml) (NÃO É NO ```PalWorldSettings.ini```). Estas configurações permitem personalizar a experiência de jogo do servidor.
+> [!WARNING]
+> Esses são todos os comandos que existem nos arquivos do jogo, porém nem todos estão funcionando.
+> O jogo quem ainda não implementou, não é um problema no servidor!
 
 | parâmetros                                | Descrição                                                          | Valor Padrão                                                                                 | Valor Permitido                        |
 |-------------------------------------------|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------|----------------------------------------|
