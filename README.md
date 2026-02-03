@@ -1,27 +1,45 @@
-# COMO CRIAR UM SERVIDOR DEDICADO DE PALWORLD
+<div align="center">
+
+# 🎮 Servidor Dedicado de Palworld com Docker
+
+**Guia completo para criar e gerenciar seu próprio servidor dedicado de Palworld gratuitamente**
+
+[![Docker](https://img.shields.io/badge/Docker-Latest-2496ED?logo=docker)](https://www.docker.com/)
+[![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Latest-2496ED?logo=docker)](https://docs.docker.com/compose/)
+[![Palworld](https://img.shields.io/badge/Palworld-Server-orange)](https://www.palworld.gg/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-Compatible-E95420?logo=ubuntu)](https://ubuntu.com/)
+
 [![Crie seu Próprio Servidor Dedicado de Palworld GRÁTIS](https://github.com/TechBeme/Palworld/assets/101749351/970e4455-bc9e-4406-be1a-a43183c178d4)](https://youtu.be/ZXk4wE1rcXM)
 
-# Sumário
-- [Introdução](#introdução)
-- [Passos para a Criação do Servidor](#passos-para-a-criação-do-servidor)
+**Idiomas:** [🇺🇸 English](README.en.md) • [🇪🇸 Español](README.es.md)
+
+</div>
+
+---
+
+## 📋 Sumário
+- [📖 Introdução](#-introdução)
+- [🚀 Passos para a Criação do Servidor](#-passos-para-a-criação-do-servidor)
   - [Escolha do Serviço de Hospedagem](#1-escolha-do-serviço-de-hospedagem)
   - [Acesso e Configuração da Máquina Virtual](#2-acesso-e-configuração-da-máquina-virtual)
   - [Configuração do Servidor Palworld](#3-configuração-do-servidor-palworld)
   - [Acesso ao Servidor](#4-acesso-ao-servidor)
-- [Como Atualizar o Servidor de Palworld](#como-atualizar-o-servidor-de-palworld)
-- [Como Atualizar a Imagem do Docker](#como-atualizar-a-imagem-do-docker)
-- [Como Alterar as Configurações do Servidor de Palworld](#como-alterar-as-configurações-do-servidor-de-palworld)
+- [🔄 Como Atualizar o Servidor de Palworld](#-como-atualizar-o-servidor-de-palworld)
+- [🐳 Como Atualizar a Imagem do Docker](#-como-atualizar-a-imagem-do-docker)
+- [⚙️ Como Alterar as Configurações do Servidor de Palworld](#%EF%B8%8F-como-alterar-as-configurações-do-servidor-de-palworld)
   - [Lista dos Parâmetros de Configuração do Servidor Dedicado do Palworld](#1-lista-dos-parâmetros-de-configuração-do-servidor-dedicado-do-palworld)
   - [Lista de Comandos de Administrador do Servidor Dedicado do Palworld](#2-lista-de-comandos-de-administrador-do-servidor-dedicado-do-palworld)
-- [Como Fazer Backup Automático e Restaurar Saves do Servidor de Palworld](#como-fazer-backup-automático-e-restaurar-saves-do-servidor-de-palworld)
+- [💾 Como Fazer Backup Automático e Restaurar Saves do Servidor de Palworld](#-como-fazer-backup-automático-e-restaurar-saves-do-servidor-de-palworld)
 
-# INTRODUÇÃO
+---
+
+## 📖 Introdução
 Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer momento, sem depender do seu PC ou internet pessoal. Este guia aborda a criação de um servidor utilizando serviços de nuvem como Oracle Cloud, Google Cloud, AWS e Hostinger.
 
 > [!WARNING]
 > Atualmente, servidores dedicados estão disponíveis exclusivamente para usuários da Steam. Infelizmente, jogadores do Xbox Gamepass ou do Xbox Console não conseguem se conectar a servidores dedicados. Para esses jogadores, a única opção disponível é participar de sessões privadas por convite que comportam no máximo 4 jogadores.
 
-# PASSOS PARA A CRIAÇÃO DO SERVIDOR
+## 🚀 Passos para a Criação do Servidor
 ### 1. Escolha do Serviço de Hospedagem
 
 | VPS | CPUs | Ram | Preço |
@@ -129,7 +147,9 @@ Criar um servidor dedicado para Palworld permite jogar com amigos a qualquer mom
 - **Abra o Palworld e Conecte-se ao Servidor:**
    - Vá para multiplayer e use IP:PORTA para se conectar.
 
-# COMO ATUALIZAR O SERVIDOR DE PALWORLD
+---
+
+## 🔄 Como Atualizar o Servidor de Palworld
 [![Como ATUALIZAR seu Servidor Dedicado de Palworld para a Nova Versão](https://github.com/TechBeme/Palworld/assets/101749351/78e6a562-8420-418b-9a2b-5afa823fba92)](https://youtu.be/6tdbGYvDKOU)
 
 Para atualizar o servidor para a versão mais recente do Palworld basta reiniciar o servidor.
@@ -139,7 +159,9 @@ Confira se você está como usuário root e se está no mesmo diretório do arqu
 sudo docker compose restart
 ```
 
-# COMO ATUALIZAR A IMAGEM DO DOCKER
+---
+
+## 🐳 Como Atualizar a Imagem do Docker
 ### Para Usuários do Windows:
   - **Acesse a Interface Gráfica do Docker:**
     - Navegue até 'Containers' e exclua o container atual clicando no ícone da lixeira.
@@ -171,17 +193,19 @@ sudo docker compose restart
         docker compose up -d
         ```
 
-# COMO ALTERAR AS CONFIGURAÇÕES DO SERVIDOR DE PALWORLD
+---
+
+## ⚙️ Como Alterar as Configurações do Servidor de Palworld
 [![Como Alterar as Configurações do seu Servidor Dedicado de Palworld](https://github.com/TechBeme/Palworld/assets/101749351/243722b4-e1d2-425d-9735-55ac86222cfd)](https://youtu.be/PsjYGGFpaqo)
 
 Este guia explica como alterar várias configurações no seu servidor dedicado de Palworld, por exemplo, desativar o drop de itens ao morrer, reduzir o tempo de incubação de ovos e acelerar o crafting.
-ATENÇÃO!!!
+
 > [!WARNING]
 > NÃO É MAIS NECESSÁRIO ALTERAR O ARQUIVO ```PalWorldSettings.ini```
 >
 > Agora é possível alterar as configurações diretamente no seu [docker-compose.yml](/docker-compose.yml)
 > 
-> ENTRETANTO, PRIMEIRO É  NECESSÁRIO ATUALIZAR SUA IMAGEM DO DOCKER CONFORME ESSE GUIA: [Como Atualizar a Imagem do Docker](#como-atualizar-a-imagem-do-docker)
+> ENTRETANTO, PRIMEIRO É  NECESSÁRIO ATUALIZAR SUA IMAGEM DO DOCKER CONFORME ESSE GUIA: [Como Atualizar a Imagem do Docker](#-como-atualizar-a-imagem-do-docker)
 
 
 ### 1. Lista dos Parâmetros de Configuração do Servidor Dedicado do Palworld
@@ -263,12 +287,12 @@ Estes comandos de administração do servidor de Palworld são utilizados dentro
 | /Info                                     | Mostra informações do servidor.                                                                                                                                                                                                       |
 | /Save                                     | Salva manualmente os dados do jogo, como a progressão dos jogadores e criaturas.                                                                                                                                                      |
 
+---
 
-
-# COMO FAZER BACKUP AUTOMÁTICO E RESTAURAR SAVES DO SERVIDOR DE PALWORLD
+## 💾 Como Fazer Backup Automático e Restaurar Saves do Servidor de Palworld
 Este guia ensina como realizar backups automáticos e manuais do seu servidor dedicado de Palworld, além de como restaurar saves antigos.
 > [!IMPORTANT]
-> Estes comandos só irão funcionar se você atualizar sua imagem do Docker para a versão mais recente: [Como Atualizar a Imagem do Docker](#como-atualizar-a-imagem-do-docker)
+> Estes comandos só irão funcionar se você atualizar sua imagem do Docker para a versão mais recente: [Como Atualizar a Imagem do Docker](#-como-atualizar-a-imagem-do-docker)
 
 ### 1. Criar um Backup
   - Para criar um backup do save do jogo no momento atual, use o comando:
@@ -306,3 +330,16 @@ Este guia ensina como realizar backups automáticos e manuais do seu servidor de
 >   curl --upload-file <nome do backup> https://transfer.sh/<nome do backup>
 >   ```
 > - Copie o link fornecido e baixe o arquivo no seu PC ou no outro servidor.
+
+---
+
+<div align="center">
+
+**Developed by [Rafael Vieira](https://github.com/TechBeme)**
+
+[![GitHub](https://img.shields.io/badge/GitHub-TechBeme-181717?logo=github)](https://github.com/TechBeme)
+[![Fiverr](https://img.shields.io/badge/Fiverr-Tech__Be-1DBF73?logo=fiverr)](https://www.fiverr.com/tech_be)
+[![Upwork](https://img.shields.io/badge/Upwork-Profile-14a800?logo=upwork)](https://www.upwork.com/freelancers/~01f0abcf70bbd95376)
+[![Email](https://img.shields.io/badge/Email-contact@techbe.me-EA4335?logo=gmail)](mailto:contact@techbe.me)
+
+</div>
